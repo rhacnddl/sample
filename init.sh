@@ -1,5 +1,5 @@
 #ENVIRONMENT
-VER=0.0.2
+VER=0.0.3
 #Dockerfile build
 echo "Build Dockerfile ver.$VER"
 docker build --build-arg VER=$VER -t rhacnddl/sample:$VER .
