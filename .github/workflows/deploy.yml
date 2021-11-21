@@ -27,6 +27,12 @@ jobs:
     - name: Build with Gradle
       run: ./gradlew build
     
+    - name: docker hub login
+      uses: docker/login-action@v1
+      with:
+        username: ${{ secrets.DOCKER_ACCOUNT }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
+      
     - name: execute shell script
       run: sh init.sh
     
