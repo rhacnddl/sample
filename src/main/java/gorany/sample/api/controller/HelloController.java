@@ -11,6 +11,7 @@ public class HelloController {
 
     @RequestMapping(path = "/health", method = {RequestMethod.GET, RequestMethod.POST})
     public ResponseEntity<String> healthCheck(){
+        
         return new ResponseEntity<>("hello", HttpStatus.OK);
     }
 }
