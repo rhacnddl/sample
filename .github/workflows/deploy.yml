@@ -26,3 +26,7 @@ jobs:
       run: chmod +x gradlew
     - name: Build with Gradle
       run: ./gradlew build
+    
+    -name: execute shell script
+      run: sh init.sh
+    
