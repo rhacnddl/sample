@@ -27,6 +27,8 @@ jobs:
     - name: Build with Gradle
       run: ./gradlew build
     
+    - name: docker login
+      run: docker login -u ${{ secrets.DOCKER_ACCOUNT }} -p ${{ secrets.DOCKER_PASSWORD }}
     - name: execute shell script
       run: sh init.sh
     
