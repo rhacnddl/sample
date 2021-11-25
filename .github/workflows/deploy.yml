@@ -36,3 +36,12 @@ jobs:
     - name: execute shell script
       run: sh init.sh
     
+    - name: Deploy
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.AWS_IP }}
+        username: ${{ secrets.AWS_ID }}
+        key: ${{ secrets.AWS_PRIVATE_KEY }}
+        port: ${{ secrets.AWS_SSH_PORT }}
+        script: |
+          pwd
