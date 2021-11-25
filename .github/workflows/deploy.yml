@@ -45,3 +45,5 @@ jobs:
         port: ${{ secrets.AWS_SSH_PORT }}
         script: |
           pwd
+          cd sample
+          sh init.sh
