@@ -46,4 +46,4 @@ jobs:
         script: |
           pwd
           cd sample
-          sh init.sh
+          sudo sh init.sh
